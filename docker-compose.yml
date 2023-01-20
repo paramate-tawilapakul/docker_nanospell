@@ -1,0 +1,11 @@
+#  docker-compose -f docker-compose.yml config check validate config
+version: '3.7'
+services:
+  spellcheker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: 'nanospell:latest'
+    container_name: spellcheker
+    working_dir: /var/www/html/nanospell
+    ports: ['4050:80']
