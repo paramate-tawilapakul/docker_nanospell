@@ -9,3 +9,4 @@ services:
     container_name: spellcheker
     working_dir: /var/www/html/nanospell
     ports: ['4050:80']
+    restart: on-failure
